@@ -20,4 +20,4 @@ group :development do
   gem 'spring-watcher-listen', '2.0.1'
 end
 
-gem 'tzinfo-data', '1.2.5', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+gem 'tzinfo-data', '2.0.0', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
