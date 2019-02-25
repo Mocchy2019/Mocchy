@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  get 'mocchy' => 'mocchy#index'
+  get 'home' => 'home#index'
   get 'contact' => 'contact#index'
 end
