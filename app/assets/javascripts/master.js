@@ -1,15 +1,15 @@
-const topBarBurger = document.querySelector(".header__burger");
-const topBar = document.querySelector(".header");
-const topBarOpen = "header--open";
+const headerMenu = document.querySelector(".header__menu");
+const header = document.querySelector("header");
+const headerOpen = "header--open";
 const noScroll = "no-scroll";
 let topBarVisible = false;
-topBarBurger.onclick = () => {
+headerMenu.onclick = () => {
   if (topBarVisible) {
     document.documentElement.classList.remove(noScroll);
-    topBar.classList.remove(topBarOpen);
+    header.classList.remove(headerOpen);
   } else {
     document.documentElement.classList.add(noScroll);
-    topBar.classList.add(topBarOpen);
+    header.classList.add(headerOpen);
   }
   topBarVisible = !topBarVisible;
 };

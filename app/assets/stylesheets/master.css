@@ -73,12 +73,12 @@ body.no-scroll {
   overflow: hidden;
 }
 
-.header {
+header {
   display: grid;
   grid-template-columns: 3rem 1fr 3rem;
   grid-template-rows: var(--header-height) 1fr;
   grid-template-areas:
-    ". title burger"
+    ". title menu"
     "nav nav nav";
   position: fixed;
   top: 0;
@@ -113,14 +113,14 @@ body.no-scroll {
   vertical-align: middle;
 }
 
-.header__burger {
-  grid-area: burger;
+.header__menu {
+  grid-area: menu;
   align-self: center;
   justify-self: center;
   cursor: pointer;
 }
 
-.header__burger > * {
+.header__menu > * {
   width: 1em;
   height: 0.15em;
   margin: 0.15em 0;
@@ -144,7 +144,7 @@ body.no-scroll {
 .header__nav a {
   vertical-align: middle;
   color: var(--white);
-	text-decoration: none;
+  text-decoration: none;
 }
 
 main {
