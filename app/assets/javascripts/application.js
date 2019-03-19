@@ -14,3 +14,19 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+const headerMenu = document.querySelector(".header__menu");
+const header = document.querySelector("header");
+const headerOpen = "header--open";
+const noScroll = "no-scroll";
+let headerVisible = false;
+headerMenu.onclick = () => {
+  if (headerVisible) {
+    document.documentElement.classList.remove(noScroll);
+    header.classList.remove(headerOpen);
+  } else {
+    document.documentElement.classList.add(noScroll);
+    header.classList.add(headerOpen);
+  }
+  headerVisible = !headerVisible;
+};
