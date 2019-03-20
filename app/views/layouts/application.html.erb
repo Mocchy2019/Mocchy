@@ -1,15 +1,49 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
-    <title>Mocchy</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag "application",
+      "data-turbolinks-track": "reload"
+    %>
+    <%= javascript_include_tag "application",
+      "data-turbolinks-track": "reload",
+      defer: true
+    %>
+    <title>Mocchy</title>
   </head>
 
   <body>
-    <%= yield %>
+    <header>
+      <div class="header__title">Mocchy</div>
+      <div class="header__menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <nav class="header__nav">
+        <div><a href="/">Home</a></div>
+        <div><a href="#">学生団体</a></div>
+        <div><a href="#">イベント</a></div>
+        <div><a href="#">雑誌</a></div>
+        <div><a href="#">About Mocchy</a></div>
+        <div><a href="#">お問い合わせ</a></div>
+      </nav>
+    </header>
+    <main>
+      <%= yield %>
+    </main>
+    <footer>
+      <img
+        src="https://via.placeholder.com/50.png?text=M"
+        alt="Mocchy logo"
+        class="footer__logo"
+      />
+      <div class="footer__title">Mocchy</div>
+      <div class="footer__contact"><a href="#">お問い合わせ</a></div>
+    </footer>
   </body>
 </html>
