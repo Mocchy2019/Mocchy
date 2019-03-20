@@ -1,0 +1,94 @@
+.event-detail__close {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 1.5vh;
+  right: 3vw;
+  z-index: 10;
+}
+.empty-space {
+  display: block;
+  position: relative;
+  width: calc(100vw - var(--gutter) * 2);
+  height: 460px;
+}
+.event-detail__top-img {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 500px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  z-index: 5;
+}
+
+.event-detail__about {
+  display: grid;
+  grid-template-rows: auto auto 30px;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas:
+    ". ed-title ."
+    "ed-desc ed-desc ed-desc"
+    ". ed-more ed-more";
+  width: 300px;
+  margin: 45px auto;
+}
+.event-detail__title {
+  grid-area: ed-title;
+  margin: 15px;
+  font-size: 25px;
+  font-weight: bold;
+  font-family: "メイリオ";
+  text-align: center;
+  color: rgb(4, 95, 4);
+}
+.see-more{
+  align-self: center;
+}
+
+.detail__info {
+  display: grid;
+  grid-template-columns: 30px auto;
+  grid-gap: 10px;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0;
+}
+.detail__info span {
+  font-size: 20px;
+  font-weight: bold;
+}
+.detail__icon {
+  width: 30px;
+  height: 30px;
+}
+
+
+.event-detail__apply {
+  width: 280px;
+  height: 40px;
+  box-shadow: var(--dropshadow-general);
+  align-self: center;
+  justify-self: center;
+  color: var(--white);
+  background: var(--theme-color);
+  border-radius: var(--roundness-general);
+  text-align: center;
+  margin: 30px auto 15px;
+  font-family: "メイリオ";
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 2;
+}
+
+.general-info {
+  margin: 0 auto 45px;
+  grid-template-columns: 70px 230px;
+  width: 300px;
+}
+.general-info > * {
+  max-width: 230px;
+}

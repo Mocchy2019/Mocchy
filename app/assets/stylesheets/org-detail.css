@@ -1,6 +1,6 @@
 .comment {
   display: grid;
-  grid-template-columns: 90px 210px;
+  grid-template-columns: 100px 200px;
   grid-template-rows: 40px 40px 44px 130px;
   grid-template-areas:
     "c-icon c-name"
