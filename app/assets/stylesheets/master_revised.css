@@ -123,8 +123,8 @@ body.no-scroll {
     "nav nav nav";
   position: fixed;
   top: 0;
+  left: 0;
   width: 100vw;
-  max-width: var(--max-width);
   height: var(--header-height);
   overflow-y: hidden;
   transition: height 0.2s;
@@ -200,11 +200,10 @@ main {
   padding: var(--header-height) var(--gutter) 0;
   min-height: 100vh;
 }
-
-.general-info__icon {
-  --width: 60px;
-  --height: 60px;
-  --roundness-general: 2px;
+@media screen and (min-width: 768px) {
+  main{
+    padding: var(--header-height) calc(var(--gutter)*3) 0;
+  }
 }
 
 .preference {
@@ -218,9 +217,11 @@ footer {
   display: flex;
   justify-content: center;
   align-content: center;
+  position: absolute;
+  left: 0;
   background-color: var(--theme-color);
+  width: 100vw;
   height: var(--header-height);
-  padding: 0 var(--gutter);
 }
 
 .footer__logo {
