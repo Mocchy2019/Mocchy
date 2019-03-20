@@ -42,14 +42,14 @@
   display: inline-block;
   text-decoration: none;
   margin: 0;
-  max-width: 200px;
+	max-width: 200px;
   color: var(--black);
 }
 .general-info__icon {
   grid-area: gi-icon;
   width: 60px;
-  height: 60px;
-  object-fit: cover;
+	height: 60px;
+	object-fit: cover;
   object-position: 50% 50%;
   border-radius: 20px;
   box-shadow: var(--dropshadow-general);
@@ -75,34 +75,33 @@
 
 .sub-title {
   display: block;
-  margin-top: 45px;
+	margin-top: 45px;
 }
 .sub-title__text {
   padding: 0 0 5px 0;
   margin: 0;
   font-size: 25px;
 }
-
+ 
 .org-info {
   display: grid;
-  grid-template-rows: 210px 40px 40px 10px;
-  grid-template-columns: 90px 200px;
-  grid-template-areas:
-    "o-img o-img"
-    "o-icon o-slogan"
-    "o-icon o-title"
-    "o-space o-space";
+	grid-template-rows: 210px 40px 40px 10px;
+	grid-template-columns: 90px 200px;
+	grid-template-areas: 
+	"o-img o-img"
+	"o-icon o-slogan"
+	"o-icon o-title"
+	"o-space o-space";
   position: relative;
   height: 300px;
   width: 290px;
   margin: 15px auto 30px;
-  padding: 0 1px;
   border-radius: var(--border-radius-big);
   box-shadow: var(--dropshadow-general);
 }
 .org-info__img {
   grid-area: o-img;
-  object-fit: cover;
+	object-fit: cover;
   object-position: 50% 50%;
   width: 290px;
   height: 210px;
@@ -116,45 +115,44 @@
   height: 60px;
   border-radius: 20px;
   box-shadow: var(--dropshadow-general);
-  justify-self: center;
-  align-self: center;
+	justify-self: center;
+	align-self: center;
 }
-.org-info p {
-  grid-area: o-slogan;
-  line-height: 1.7;
-  font-size: 13px;
+.org-info p{
+	grid-area: o-slogan;
+	line-height: 1.7;
+	font-size: 13px;
 }
-.org-info h2 {
-  grid-area: o-title;
-  line-height: 0.8;
-  align-self: end;
-  font-size: 25px;
+.org-info h2{
+	grid-area: o-title;
+	line-height: 0.8;
+	align-self: end;
+	font-size: 25px;
 }
-.org-info span {
-  grid-area: o-space;
-  background-color: var(--org-color);
+.org-info span{
+	grid-area: o-space;
+	background-color: var(--org-color);
   border-radius: 0 0 var(--roundness-general) var(--roundness-general);
 }
 
-.event-info {
-  display: grid;
-  grid-template-rows: 9px 27px 27px 27px 210px;
-  width: 290px;
+.event-info{
+	display: grid;
+  grid-template-rows: 9px 27px 27px 27px 210px; 
+	width: 290px;
   margin: 15px auto 30px;
   padding: 0 1px;
-  border-radius: var(--roundness-general);
-  box-shadow: var(--dropshadow-general);
+	border-radius: var(--roundness-general);
+	box-shadow: var(--dropshadow-general);
 }
-.event-info span {
-  background-color: var(--event-color);
-  border-radius: var(--roundness-general) var(--roundness-general) 0 0;
+.event-info span{
+	background-color: var(--event-color);
+	border-radius: var(--roundness-general) var(--roundness-general) 0 0;	
 }
-.event-info p,
-.event-info h2 {
+.event-info p, .event-info h2{
   width: 240px;
   margin-left: 15px;
   padding: 0;
-  overflow-x: hidden;
+	overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -173,72 +171,71 @@
   align-self: end;
 }
 
-.event-info__img {
-  object-fit: cover;
+.event-info__img{
+	object-fit: cover;
   object-position: 50% 50%;
   width: 290px;
   height: 210px;
-  border-radius: 0 0 var(--roundness-general) var(--roundness-general);
+  border-radius: 0 0 var(--roundness-general) var(--roundness-general);	
 }
 
 .mgz-info {
-  display: grid;
-  grid-template-rows: 380px 40px 40px 10px;
-  grid-template-columns: 90px 200px;
-  grid-template-areas:
-    "m-img m-img"
-    "m-icon m-slogan"
-    "m-icon m-title"
-    "m-space m-space";
+	display: grid;
+	grid-template-rows: 380px 40px 40px 10px;
+	grid-template-columns: 90px 200px;
+	grid-template-areas:
+	"m-img m-img"
+	"m-icon m-slogan"
+	"m-icon m-title"
+	"m-space m-space";
   width: 290px;
   margin: 15px auto 30px;
-  border-radius: var(--roundness-general);
+	border-radius: var(--roundness-general);
   box-shadow: var(--dropshadow-general);
 }
 .mgz-info__img {
-  grid-area: m-img;
+	grid-area: m-img;
   object-fit: cover;
   object-position: 50% 50%;
   width: 100%;
-  height: 100%;
+	height:100%;
   margin: 0;
-  padding: 0;
-  border-radius: var(--roundness-general) var(--roundness-general) 0 0;
+	padding: 0;
+	border-radius: var(--roundness-general) var(--roundness-general) 0 0;
 }
-.mgz-info__icon {
-  grid-area: m-icon;
-  object-fit: cover;
+.mgz-info__icon{
+	grid-area: m-icon;
+	object-fit: cover;
   object-position: 50% 50%;
   width: 60px;
   height: 60px;
   border-radius: 20px;
-  justify-self: center;
-  align-self: center;
+	justify-self: center;
+	align-self: center;
 }
-.mgz-info p,
-.mgz-info h2 {
-  margin-left: 0;
-  padding: 0;
-  align-self: center;
-  overflow-x: hidden;
+.mgz-info p, .mgz-info h2{
+	margin-left: 0;
+	padding: 0;
+	align-self: center;
+	overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 .mgz-info p {
-  grid-area: m-slogan;
-  color: var(--gray);
-  align-self: start;
-  line-height: 1.8;
+	grid-area: m-slogan;
+	color: var(--gray);
+	align-self: start;
+	line-height: 1.8
 }
 .mgz-info h2 {
-  grid-area: m-title;
-  align-self: end;
-  line-height: 0.9;
+	grid-area: m-title;
+	align-self: end;
+	line-height: 0.9;
 }
 .mgz-info span {
-  grid-area: m-space;
-  background-color: var(--mgz-color);
-  border-radius: 0 0 var(--roundness-general) var(--roundness-general);
+	grid-area: m-space;
+	background-color: var(--mgz-color);
+	border-radius:  0 0 var(--roundness-general) var(--roundness-general);
 }
 
 .see-genre {
@@ -249,18 +246,18 @@
   box-shadow: var(--dropshadow-general);
   margin: 0.5rem auto 3rem auto;
   padding: 0;
-  background-color: var(--theme-color);
-  color: var(--white);
+	background-color: var(--theme-color);
+	color: var(--white);
   font-size: 1.4rem;
   line-height: 2;
   text-align: center;
-  text-decoration: none;
+	text-decoration: none;
 }
 
 /* I. スマホ, ii. ホームページ */
 .open-visual {
   position: absolute;
-  top: var(--header-height);
+  top: var( --header-height);
   left: 0;
   width: 100vw;
   height: 30vh;
@@ -273,8 +270,8 @@
   object-position: 50% 50%;
   width: 100%;
   height: 100%;
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
   opacity: 0;
   transition: opacity 0.5s;
 }
@@ -294,7 +291,7 @@
   top: var(--header-height);
   left: 0;
   z-index: 5;
-  margin: 0 auto;
+  margin: 0 auto ;
   width: 100vw;
   height: 212px;
   text-align: center;
@@ -306,16 +303,15 @@
 .open-visual__text h2 {
   grid-area: ov-text;
 }
-.empty-box {
+.empty-box{
   display: block;
   position: relative;
   width: 80vw;
   height: calc(var(--header-height) + 30vh);
 }
 
-.x-scroll {
-  display: grid;
-  grid-template-rows: 1fr;
+.x-scroll{
+	display: grid;
   grid-auto-flow: column;
   grid-gap: 1.5rem;
   overflow-x: auto;
@@ -325,119 +321,205 @@
   margin: 0;
 }
 
+
 /* I. スマホ, iii. ジャンル */
 
 /* I. スマホ, iv. サーチリストのみで使うunit */
-.select-genre {
-  display: grid;
-  grid-template-columns: 95px 95px 95px;
-  grid-gap: 9px;
-  position: relative;
-  width: 303px;
-  margin: 10px auto 0;
-  padding: 0;
+.select-genre{
+	display: grid;
+	grid-template-columns: 95px 95px 95px;
+	grid-gap: 9px;
+	position: relative;
+	width: 303px;
+	margin: 10px auto 0;
+	padding: 0;
 }
 
 .select-genre label {
-  display: grid;
-  grid-template-rows: 80px 30px;
-  width: 100%;
-  background-color: #ffd700;
+	display: grid;
+	grid-template-rows: 80px 30px;
+	width: 100%;
+  background-color: #FFD700;
   color: var(--black);
   transition: background-color 0.2s;
-  border-radius: var(--roundness-general);
+	border-radius: var(--roundness-general);
 }
-.select-genre input[type="checkbox"] {
-  display: inline-block;
-  position: absolute;
-  width: 20px;
-  height: 20px;
+.select-genre input[type="checkbox"]{
+	display: inline-block;
+	position: absolute;
+	width: 20px;
+	height: 20px;
 }
-.select-genre__container {
+.select-genre__container{
   transition: background-color 0.2s;
 }
-.select-genre__container :checked + label {
-  background-color: var(--theme-color);
+.select-genre__container :checked + label{
+	background-color: var(--theme-color);
 }
 
-.select-genre__img {
-  width: 70px;
-  height: 70px;
-  justify-self: center;
-  align-self: end;
-  border: none;
+.select-genre__img{
+	width: 70px;
+	height: 70px;
+	justify-self: center;
+	align-self: end;
+	border: none;
 }
-.select-genre__container span {
-  text-align: center;
-  align-self: start;
-  font-weight: bold;
+.select-genre__container span{
+	text-align: center;
+	align-self: start;
+	font-weight: bold;
 }
 
 .select-tag__button {
-  width: calc(100vw - var(--gutter) * 2);
-  border: var(--border-strong);
-  margin: 30px auto 0;
-  border-radius: var(--border-radius-big);
-  background-color: var(--white);
-  font-size: 1rem;
-  color: var(--dark-gray);
+	width: calc(100vw - var(--gutter) * 2);
+	border: var(--border-strong);
+	margin: 30px auto 0;
+	border-radius: var(--border-radius-big);
+	background-color: var(--white);
+	font-size: 1rem;
+	color: var(--dark-gray);
 }
-.select-tag__section {
-  display: none;
+.select-tag__section{
+	display: none;
 }
-.select-tag:hover .select-tag__section {
-  display: block;
-  position: relative;
+.select-tag:hover .select-tag__section{
+	display: block;
+	position: relative;
   width: calc(100vw - var(--gutter) * 2);
-  border: var(--border-normal);
-  z-index: 1;
+	border: var(--border-normal);
+	z-index: 1;
 }
 .select-tag__category {
-  margin: 30px 0 7.5px 15px;
-  font-weight: bolder;
+	margin: 30px 0 7.5px 15px;
+	font-weight: bolder;
 }
-.select-tag__option {
-  display: grid;
-  grid-template-columns: 20px auto;
-  grid-gap: 7.5px 0;
-  margin-left: 15px;
+.select-tag__option{
+	display: grid;
+	grid-template-columns: 20px auto;
+	grid-gap: 7.5px 0;
+	margin-left: 15px;
 }
 
 .preference {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  position: relative;
+	position: relative;
   margin: 30px auto 30px;
   border-top: var(--border-normal);
   border-bottom: var(--border-normal);
-  justify-items: center;
-  color: var(--gray);
-  font-size: 0.8rem;
+	justify-items: center;
+	color: var(--gray);
+	font-size: 0.8rem;
 }
-.preference input {
-  display: none;
+.preference input{
+	display: none;
 }
-.preference :checked + label {
-  color: var(--theme-color);
+.preference :checked + label{
+	color: var(--theme-color);
 }
 
 /* I. スマホ, v. 詳細ページ */
+.detail__title {
+  display: flex;
+  position: relative;
+  max-width: 320px;
+  height: 70px;
+  margin: 30px auto 15px;
+  justify-content: center;
+}
+.detail__name {
+  font-family: メイリオ;
+  font-size: 25px;
+  color: black;
+  font-weight: bold;
+  margin: auto 15px;
+  text-align: center;
+}
+
+.detail__wrapper{
+  display: grid;
+  grid-template-rows: 10px auto 10px;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas: 
+  ". d-scroll ."
+  "d-arrowone d-scroll d-arrowtwo"
+  ". d-scroll .";
+  height: 200px;
+  max-width: 350px;
+  margin: 0 auto;
+}
+.detail__arrowone{
+  grid-area: d-arrowone;
+}
+.detail__arrowtwo{
+  grid-area: d-arrowtwo;
+}
+.detail__arrowone,
+.detail__arrowtwo{
+  width: 15px;
+  height: 75px;
+  align-self: center;
+}
+.detail__scroll {
+  grid-area: d-scroll;
+  display: block;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  max-width: 320px;
+  min-width: 276px;
+  height: 200px;
+  white-space: nowrap;
+  justify-self: center;
+}
+.detail__scr-item {
+  display: inline-block;
+  object-fit: cover;
+  object-position: 50%;
+  width: 270px;
+  height: 190px;
+  margin: 3px;
+  border-radius: calc(var(--roundness-general)/2);
+}
+
+.detail__info {
+  display: grid;
+  grid-template-columns: 30px auto;
+  grid-gap: 10px;
+  align-items: center;
+  width: 300px;
+  margin: 0 auto;
+  padding: 0;
+}
+.detail__info span {
+  font-size: 20px;
+  font-weight: bold;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.detail__icon {
+  width: 30px;
+  height: 30px;
+}
+
 .detail__desc {
   grid-area: ed-desc;
   max-width: 320px;
   height: 60px;
   margin: 0 auto;
-  padding: 0 5px;
+  padding: 0 5px; 
   overflow-x: hidden;
   overflow-y: hidden;
   text-overflow: ellipsis;
   font-size: 16px;
   font-family: "遊ゴシック";
 }
-.see-more_box {
+.see-more_box{
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: ". . ed-more";
+  grid-template-areas:
+  ". . ed-more";
   max-width: 320px;
   margin: 0 auto;
 }
@@ -451,14 +533,14 @@
 .detail__subtitle {
   display: block;
   position: relative;
-  margin: 45px auto 15px;
+  margin: 45px auto 10px;
   max-width: 320px;
   font-size: 25px;
   font-family: "メイリオ";
   font-weight: bold;
 }
 
-.detail__hashtag {
+.detail__hashtag{
   max-width: 320px;
   margin: 0 auto;
   padding: 0 15px;
@@ -491,7 +573,7 @@
     font-size: 2rem;
     height: 600px;
   }
-  .empty-box {
+  .empty-box{
     display: block;
     position: relative;
     width: 80vw;
@@ -502,7 +584,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 0 0 50px 0;
-  }
+	}
 
   /* II. タブレット, iii. ジャンル */
 
@@ -522,8 +604,9 @@
     grid-template-columns: 1fr 1fr;
     margin: 0 0 30px 0;
   }
-}
-/* II. タブレット, v. 詳細ページ */
+
+  /* II. タブレット, v. 詳細ページ */
+
 
 /* III. パソコン */
 /* III. パソコン, i. 複数のページで使うunit */
