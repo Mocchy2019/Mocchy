@@ -1,0 +1,230 @@
+/*
+ * 全部のページで使う
+ * html, body, header, main, footer
+ */
+
+/* https://css-tricks.com/box-sizing/ */
+/* http://www.htmq.com/css3/box-sizing.shtml */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 画面をportraitモードに固定 */
+/* @media only screen and (orientation: landscape) {
+  body {
+    height: 100vw;
+    transform: rotate(90deg);
+  }
+} */
+
+html {
+  /* よく使われる変数 */
+  /* 注意！これらを変更したら、複数のページで大きな効果がある */
+
+  /* 色を使う時、この中から一つ使う */
+  --theme-color: #ed3d57;
+  --org-color: #bfeafa;
+  --event-color: #f89498;
+  --mgz-color: #faefbf;
+  --black: #000;
+  --dark-gray: #333;
+  --gray: #777;
+  --light-gray: #aaa;
+  --off-white: rgba(245, 245, 245, 0.918);
+  --white: #fff;
+  --blue: rgb(20, 20, 167);
+  --opaque-white: rgba(245, 245, 245, 0.8);
+
+  /*余白*/
+  /*基本の余白*/
+  --padding-general: 30px;
+  /*水平方向で隣り合うユニット間の余白*/
+  --unit-unit_hori: 13px;
+
+  /*タイトル書き始め位置*/ /*左端から１５px*/
+
+  /* ~card用のpadding&margin */
+  --card-padding: 15px 0;
+  --card-margin: 0 auto;
+
+  /* borderの定義 */
+  --border-strong: 0.07rem solid var(--gray);
+  --border-normal: 0.03rem solid var(--light-gray);
+
+  /* border-radiusと一緒に使う */
+  --roundness-general: 10px;
+  --border-radius-small: 0.5rem;
+  --border-radius-big: 1rem;
+
+  /* 常に上にあるやつ（top bar）の高さ */
+  --header-height: 2.5rem;
+
+  /* パソコンなどの画面のでかいやつを使うための幅の上限 */
+  --max-width: 1300px;
+
+  /* 溝 */
+  --gutter: 0.7rem;
+
+  /*ドロップシャドウ*/
+  --dropshadow-general: 3px 3px 10px var(--light-gray);
+
+  /* 大体全部の要素に使われるルール */
+  color: var(--dark-gray);
+  font-family: "Trebuchet MS", "メイリオ", "游ゴシック", sans-serif;
+  line-height: 1.3;
+  font-size: 16px;
+
+  /*font　general　by design-team*/
+  --font-title: "メイリオ", 25pt, bold, black;
+  --font-name: "メイリオ", 20pt, bold, black;
+  --font-body: sans-serif, 16pt, bold, black;
+  --font-button: "メイリオ", 15pt, bold, white;
+  --font-catch: "メイリオ", 13pt, medium, black;
+
+  /* 自動的のスクロールをアニメイトする */
+  scroll-behavior: smooth;
+
+  /*font-space general by design-team*/
+  /*タイトルの文字間隔*/
+  --space-title: 0px;
+  /*タイトル以外の文字間隔*/
+  --space-general: 8px;
+}
+
+body {
+  /* 幅の上限を設定する */
+  margin: 0 auto;
+  max-width: var(--max-width);
+}
+
+/* body要素だけに使う */
+body.no-scroll {
+  overflow: hidden;
+}
+
+.linkcover{
+  color: inherit;
+  text-decoration-line: none;
+  height: max-content;
+}
+.linkcover:active{
+  color: inherit;
+  text-decoration-line: none;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 3rem 1fr 3rem;
+  grid-template-rows: var(--header-height) 1fr;
+  grid-template-areas:
+    "icon title burger"
+    "nav nav nav";
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  max-width: var(--max-width);
+  height: var(--header-height);
+  overflow-y: hidden;
+  transition: height 0.2s;
+  z-index: 100;
+  background-color: var(--theme-color);
+  color: var(--white);
+  font-size: 1.5rem;
+}
+
+.header--open {
+  height: 100%;
+}
+
+.header__search {
+  grid-area: search;
+  height: var(--header-height);
+}
+
+.header__icon{
+  width: 20px;
+  align-self: center;
+  justify-self: center;
+}
+
+.header__title {
+  grid-area: title;
+  justify-self: center;
+  align-self: center;
+  color: inherit;
+  text-decoration-line: inherit;
+  font-weight: bold;
+}
+
+.header__title > * {
+  vertical-align: middle;
+}
+
+.header__burger {
+  grid-area: burger;
+  align-self: center;
+  justify-self: center;
+  cursor: pointer;
+}
+
+.header__burger > * {
+  width: 1em;
+  height: 0.15em;
+  margin: 0.15em 0;
+  background-color: var(--white);
+  border-radius: var(--border-radius-big);
+}
+
+.header__nav {
+  grid-area: nav;
+  display: grid;
+  align-content: center;
+  text-align: center;
+  background-color: var(--theme-color);
+}
+
+.header__nav > * {
+  height: var(--header-height);
+  margin: 3vh;
+}
+
+.header__nav a {
+  vertical-align: middle;
+  color: var(--white);
+  text-decoration: none;
+}
+
+main {
+  padding: var(--header-height) var(--gutter) 0;
+  min-height: 100vh;
+}
+
+.general-info__icon {
+  --width: 60px;
+  --height: 60px;
+  --roundness-general: 2px;
+}
+
+.preference {
+  font-family: Meiryo;
+  font-size: 16px;
+  font-weight: regular;
+  color: #808080;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background-color: var(--theme-color);
+  height: var(--header-height);
+  padding: 0 var(--gutter);
+}
+
+.footer__logo {
+  width: 25px; 
+  align-self: center;
+  justify-self: center;
+}
