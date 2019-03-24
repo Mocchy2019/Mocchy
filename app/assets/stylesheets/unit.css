@@ -75,7 +75,7 @@
 
 .sub-title {
   display: block;
-	margin-top: 45px;
+  margin-top: 45px;
 }
 .sub-title__text {
   padding: 0 0 5px 0;
@@ -278,35 +278,47 @@
 .open-visual__image--shown {
   opacity: 1;
 }
-.open-visual__text {
+.open-visual__textbox {
   display: grid;
   position: relative;
   grid-template-columns: 1fr auto 1fr;
-  grid-template-rows: 50px auto 50px;
+  grid-template-rows: 2fr 1fr;
   grid-template-areas:
-    ". . ."
-    ". ov-text ."
-    ". . .";
+    ". ov-title ."
+    ". ov-text .";
   position: absolute;
   top: var(--header-height);
   left: 0;
   z-index: 5;
   margin: 0 auto ;
   width: 100vw;
-  height: 212px;
-  text-align: center;
-  align-content: center;
+  height: 30vh;
   color: var(--white);
-  font-size: 4vw;
-  text-shadow: 2px 2px 10px var(--black);
+  font-size: 1rem;
 }
-.open-visual__text h2 {
+.open-visual__title{
+  grid-area: ov-title;
+  font-size: 1rem;
+  margin: 0;
+  align-self: end;
+  background-color: red;
+  width: max-content;
+  padding: 2px 5px;
+}
+.open-visual__text {
   grid-area: ov-text;
+  align-self: start;
+  margin: 0;
+}
+.cover{
+  
 }
 .empty-box{
   display: block;
   position: relative;
+  left: 0;
   width: 80vw;
+  margin: 0 auto;
   height: calc(var(--header-height) + 30vh);
 }
 

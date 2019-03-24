@@ -1,0 +1,71 @@
+body {
+  background-color: var(--theme-color);
+  padding: calc(var(--gutter)*2) var(--gutter);
+  margin: 0;
+  color: var(--white);
+
+  /* welcome-pageで使う変数 */
+  --margin: 45px auto;
+}
+
+span{
+    text-decoration-line: underline;
+}
+
+.logo {
+  object-fit: contain;
+  object-position: 50% 50%;
+  width: 180px;
+  height: 180px;
+  padding: 0;
+  margin: 90px auto 60px;
+}
+
+
+.title {
+    width: max-content;
+    margin: 0 auto 100px;
+}
+
+.unit{
+    display: block;
+    min-width: 300px;
+    max-width: 320px;
+    margin: var(--margin);
+    background-color: var(--event-color);
+    border-radius: var(--roundness-general);
+}
+
+.subtitle{
+    text-align: center;
+}
+
+.wrapper{
+    display: grid;
+    justify-content: center;
+    width: 100%;
+}
+
+.icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-top: 15px;
+}
+
+.desc{
+    width: 90%;
+    margin: 15px auto;
+}
+
+.photo{
+    width: 250px;
+}
+
+.see-genre {
+  background-color: var(--white);
+  color: var(--theme-color);
+  margin: var(--margin);
+  font-weight: bold;
+}

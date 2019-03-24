@@ -119,7 +119,7 @@ body.no-scroll {
   grid-template-columns: 3rem 1fr 3rem;
   grid-template-rows: var(--header-height) 1fr;
   grid-template-areas:
-    "icon title burger"
+    "arrow title icon"
     "nav nav nav";
   position: fixed;
   top: 0;
@@ -134,16 +134,15 @@ body.no-scroll {
   font-size: 1.5rem;
 }
 
-.header--open {
-  height: 100%;
-}
-
-.header__search {
-  grid-area: search;
-  height: var(--header-height);
+.header__arrow{
+  grid-area: arrow;
+  width: 45px;
+  align-self: center;
+  justify-self: center;
 }
 
 .header__icon{
+  grid-area: icon;
   width: 20px;
   align-self: center;
   justify-self: center;
@@ -162,7 +161,7 @@ body.no-scroll {
   vertical-align: middle;
 }
 
-.header__burger {
+/* .header__burger {
   grid-area: burger;
   align-self: center;
   justify-self: center;
@@ -175,9 +174,9 @@ body.no-scroll {
   margin: 0.15em 0;
   background-color: var(--white);
   border-radius: var(--border-radius-big);
-}
+} */
 
-.header__nav {
+/* .header__nav {
   grid-area: nav;
   display: grid;
   align-content: center;
@@ -194,7 +193,7 @@ body.no-scroll {
   vertical-align: middle;
   color: var(--white);
   text-decoration: none;
-}
+} */
 
 main {
   padding: var(--header-height) var(--gutter) 0;
