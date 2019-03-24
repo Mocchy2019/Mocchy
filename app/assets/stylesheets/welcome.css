@@ -32,6 +32,7 @@ span{
     min-width: 300px;
     max-width: 320px;
     margin: var(--margin);
+    padding-bottom: 15px;
     background-color: var(--event-color);
     border-radius: var(--roundness-general);
 }

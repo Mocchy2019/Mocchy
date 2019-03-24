@@ -60,6 +60,8 @@ html {
 
   /* 常に上にあるやつ（top bar）の高さ */
   --header-height: 2.5rem;
+  /* open-visualの高さ */
+  --open-visual-height: 35vh;
 
   /* パソコンなどの画面のでかいやつを使うための幅の上限 */
   --max-width: 1300px;
@@ -127,7 +129,7 @@ body.no-scroll {
   width: 100vw;
   height: var(--header-height);
   overflow-y: hidden;
-  transition: height 0.2s;
+  transition: height 0.3s;
   z-index: 100;
   background-color: var(--theme-color);
   color: var(--white);

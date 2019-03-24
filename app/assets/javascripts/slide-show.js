@@ -8,4 +8,4 @@ setInterval(() => {
     i = 0;
   }
   container.children[i].classList.add(shown);
-}, 3000);
+}, 5000);

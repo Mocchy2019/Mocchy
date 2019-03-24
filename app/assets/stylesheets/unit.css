@@ -260,7 +260,7 @@
   top: var( --header-height);
   left: 0;
   width: 100vw;
-  height: 30vh;
+  height: var(--open-visual-height);
   margin-bottom: 30px;
   overflow: hidden;
 }
@@ -292,7 +292,7 @@
   z-index: 5;
   margin: 0 auto ;
   width: 100vw;
-  height: 30vh;
+  height: var(--open-visual-height);
   color: var(--white);
   font-size: 1rem;
 }
@@ -311,7 +311,15 @@
   margin: 0;
 }
 .cover{
-  
+  display: block;
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  width: 100vw;
+  height: var(--open-visual-height);
+  z-index: 4;
+  opacity: 0.3;
+  background-color: black;
 }
 .empty-box{
   display: block;
@@ -319,7 +327,7 @@
   left: 0;
   width: 80vw;
   margin: 0 auto;
-  height: calc(var(--header-height) + 30vh);
+  height: var(--open-visual-height);
 }
 
 .x-scroll{
@@ -581,8 +589,11 @@
     margin: 0 0 50px 0;
   }
 
-  .open-visual__text {
+  .open-visual__textbox {
     font-size: 2rem;
+    height: 600px;
+  }
+  .cover{
     height: 600px;
   }
   .empty-box{
